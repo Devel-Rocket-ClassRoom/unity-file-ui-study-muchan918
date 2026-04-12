@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.IO;
+using System;
 
 public class SaveFileManager : MonoBehaviour
 {
@@ -13,11 +14,11 @@ public class SaveFileManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        string saveDir = Path.Combine(Application.persistentDataPath, "Save");
-        string saveFile1 = Path.Combine(saveDir, "save1.txt");
-        string saveFile2 = Path.Combine(saveDir, "save2.txt");
-        string saveFile3 = Path.Combine(saveDir, "save3.txt");
-        string saveBackupFile1 = Path.Combine(saveDir, "save1_backup.txt");
+        saveDir = Path.Combine(Application.persistentDataPath, "Save");
+        saveFile1 = Path.Combine(saveDir, "save1.txt");
+        saveFile2 = Path.Combine(saveDir, "save2.txt");
+        saveFile3 = Path.Combine(saveDir, "save3.txt");
+        saveBackupFile1 = Path.Combine(saveDir, "save1_backup.txt");
 
         // 폴더가 없으면 생성
         if (!Directory.Exists(saveDir))
@@ -33,13 +34,6 @@ public class SaveFileManager : MonoBehaviour
         File.WriteAllText(saveFile1, "내용1");
         File.WriteAllText(saveFile2, "내용2");
         File.WriteAllText(saveFile3, "내용3");
-
-        // 폴더 내 파일 목록
-        string[] files = Directory.GetFiles(saveDir);
-        foreach (string file in files)
-        {
-            Debug.Log($"파일: {Path.GetFileName(file)} ({Path.GetExtension(file)})");
-        }
     }
 
     // Update is called once per frame
@@ -64,13 +58,27 @@ public class SaveFileManager : MonoBehaviour
         // 읽기
         if (Input.GetKeyDown(KeyCode.E))
         {
+            // 폴더 내 파일 목록
+            string content = "";
 
+            string[] files = Directory.GetFiles(saveDir);
+            foreach (string file in files)
+            {
+                content = "";
+                content += $"파일: {Path.GetFileName(file)}\n";
+                content += $"확장자: {Path.GetExtension(file)}\n";
+                using (StreamReader reader = File.OpenText(file))
+                    content += reader.ReadLine();
+                Debug.Log(content);
+                //Debug.Log($"파일: {Path.GetFileName(file)} ({Path.GetExtension(file)})");
+            }
         }
 
         // 삭제
         if (Input.GetKeyDown(KeyCode.R))
         {
-
+            File.Delete(saveFile3);
+            Debug.Log("save3 삭제");
         }
     }
 
@@ -83,8 +91,9 @@ public class SaveFileManager : MonoBehaviour
             copyContent = reader.ReadLine();
         }
 
-        using (FileStream copy = File.Create(saveBackupFile1))
         using (StreamWriter w = File.CreateText(saveBackupFile1))
             w.Write(copyContent);
+
+        Debug.Log("save1을 복사");
     }
 }

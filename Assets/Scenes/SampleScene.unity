@@ -266,6 +266,8 @@ GameObject:
   m_Component:
   - component: {fileID: 394494179}
   - component: {fileID: 394494178}
+  - component: {fileID: 394494180}
+  - component: {fileID: 394494181}
   m_Layer: 0
   m_Name: SaveFileManager
   m_TagString: Untagged
@@ -280,7 +282,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 394494177}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c664f7c129eb3e845b5be762c003b982, type: 3}
   m_Name: 
@@ -300,6 +302,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &394494180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394494177}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2ebe5648681f7742a9e05c29aba2138, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::encodingFile
+--- !u!114 &394494181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394494177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 090e3711c862d214788f91d45d12cec4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KeyValueFileSystem
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
