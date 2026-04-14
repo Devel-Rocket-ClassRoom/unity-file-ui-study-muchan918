@@ -7,6 +7,7 @@ public class CharacterExplain : MonoBehaviour
     public LocalizationText textName;
     public LocalizationText textDesc;
     public LocalizationText textStat;
+    public string stat;
 
     private void OnEnable()
     {
@@ -28,5 +29,9 @@ public class CharacterExplain : MonoBehaviour
         textName.OnChangedId();
         textDesc.id = data.Desc;
         textDesc.OnChangedId();
+
+        stat = DataTableManager.StringTable.Get("StatFormat");
+        textStat.id = "StatFormat";
+        textStat.text.text = string.Format(stat, data.Attack, data.Defence);
     }
 }

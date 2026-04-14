@@ -14,9 +14,8 @@ Character1Name,김유찬
 Character2Name,나상욱
 Character3Name,유민준
 Character4Name,이하늘
-Character1Desc,설명1
+Character1Desc,용암 장어 잡아봄
 Character2Desc,김경일로 변신 가능
-Character3Desc,설명3
-Character4Desc,설명4
-Attack,공격
-Defence,방어
+Character3Desc,룰루 장인
+Character4Desc,지각 이력 30회
+StatFormat,"공격력: {0} / 방어력: {1}"

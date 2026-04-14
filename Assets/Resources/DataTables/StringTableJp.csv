@@ -18,5 +18,4 @@ Character1Desc,설명1(일본어)
 Character2Desc,설명2(일본어)
 Character3Desc,설명3(일본어)
 Character4Desc,설명4(일본어)
-Attack,공격(일본어)
-Defence,방어(일본어)
+StatFormat,"공격력(일본어): {0} / 방어력(일본어): {1}"

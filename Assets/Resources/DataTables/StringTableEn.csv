@@ -18,5 +18,4 @@ Character1Desc,설명1(영어)
 Character2Desc,설명2(영어)
 Character3Desc,설명3(영어)
 Character4Desc,설명4(영어)
-Attack,Attack
-Defence,Defence
+StatFormat,"Attack: {0} / Defence: {1}"

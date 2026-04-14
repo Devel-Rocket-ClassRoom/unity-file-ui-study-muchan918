@@ -67,5 +67,5 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "FilePractice.slnx"
+    "dotnet.defaultSolution": "unity-file-ui-study-muchan918.slnx"
 }

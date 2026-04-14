@@ -12,6 +12,7 @@ public class CharacterData
     public string Name { get; set; }
     public string Desc { get; set; }
     public int Attack { get; set; }
+    public int Defence { get; set; }
     public string Icon { get; set; }
 
     public string StringName => DataTableManager.StringTable.Get(Name);
