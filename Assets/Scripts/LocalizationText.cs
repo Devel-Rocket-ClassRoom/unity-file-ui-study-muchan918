@@ -28,8 +28,8 @@ public class LocalizationText : MonoBehaviour
         text.text = DataTableManager.StringTable.Get(StringTableText.StringIds[(int)stringIds]);
     }
 
-    [ContextMenu("Apply All Localization Texts")]
-    private void ApplyAllLocalizationTexts()
+    [ContextMenu("Change Language")]
+    private void ChangeLanguage()
     {
         // LocalizationText[] allTexts = FindObjectsByType<LocalizationText>(FindObjectsSortMode.None);
         LocalizationText[] allTexts = FindObjectsByType<LocalizationText>(FindObjectsSortMode.None);
