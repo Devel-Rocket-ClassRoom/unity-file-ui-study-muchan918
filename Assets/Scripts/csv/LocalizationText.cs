@@ -1,18 +1,31 @@
+// LocalizationText.cs
+using System;
 using TMPro;
 using UnityEngine;
 
 [ExecuteInEditMode]
 public class LocalizationText : MonoBehaviour
 {
-    public StringIds stringIds;
+    public string id;
     public Languages language;
     public TextMeshProUGUI text;
 
-    private void Awake()
+    private void Update()
     {
-        if (Application.isPlaying)
+        if (Input.GetKeyDown(KeyCode.Q))
         {
-            gameObject.GetComponent<LocalizationText>().enabled = false;
+            language = Languages.Korean;
+            OnChangedId();
+        }
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            language = Languages.English;
+            OnChangedId();
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            language = Languages.Japanses;
+            OnChangedId();
         }
     }
 
@@ -21,21 +34,20 @@ public class LocalizationText : MonoBehaviour
         OnChangedId();
     }
 
-    // 인스펙터에서 변경됐을때 자동으로 실행되는 함수
     public void OnChangedId()
     {
+        if (text == null) return;
+
         Variables.Language = language;
-        text.text = DataTableManager.StringTable.Get(StringTableText.StringIds[(int)stringIds]);
+        text.text = DataTableManager.StringTable.Get(id);
     }
 
     [ContextMenu("Change Language")]
     private void ChangeLanguage()
     {
-        // LocalizationText[] allTexts = FindObjectsByType<LocalizationText>(FindObjectsSortMode.None);
         LocalizationText[] allTexts = FindObjectsByType<LocalizationText>(FindObjectsSortMode.None);
         foreach (LocalizationText locText in allTexts)
         {
-            locText.stringIds = stringIds;
             locText.language = language;
             locText.OnChangedId();
         }

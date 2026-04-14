@@ -1,5 +1,22 @@
 ﻿Id,String
-Hello,안녕
-Bye,잘가
-You die,너 죽음
-Hi,하이
+HELLO,안녕
+BYE,잘가
+YOU DIE,너 죽음
+Item1Name,검
+Item2Name,방패
+Item3Name,활 
+Item4Name,물약 
+Item1Desc,이것은 검이다.
+Item2Desc,이것은 방패다.
+Item3Desc,이것은 활이다.
+Item4Desc,이것은 물약이다.
+Character1Name,김유찬
+Character2Name,나상욱
+Character3Name,유민준
+Character4Name,이하늘
+Character1Desc,설명1
+Character2Desc,김경일로 변신 가능
+Character3Desc,설명3
+Character4Desc,설명4
+Attack,공격
+Defence,방어

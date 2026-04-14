@@ -1,5 +1,22 @@
 ﻿Id,String
-Hello,こんにちは
-Bye,さようなら
-You die,お前は死ぬ
-Hi,やあ
+HELLO,やあ
+BYE,じゃあな
+YOU DIE,あなたは死ぬ
+Item1Name,剣
+Item2Name,盾
+Item3Name,弓
+Item4Name,ポーション
+Item1Desc,これは剣だ。
+Item2Desc,これは盾だ。
+Item3Desc,これは弓だ。
+Item4Desc,これはポーションだ。
+Character1Name,김유찬(일본어)
+Character2Name,나상욱(일본어)
+Character3Name,유민준(일본어)
+Character4Name,이하늘(일본어)
+Character1Desc,설명1(일본어)
+Character2Desc,설명2(일본어)
+Character3Desc,설명3(일본어)
+Character4Desc,설명4(일본어)
+Attack,공격(일본어)
+Defence,방어(일본어)

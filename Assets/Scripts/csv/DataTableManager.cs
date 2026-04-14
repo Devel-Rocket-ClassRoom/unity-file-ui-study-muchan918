@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Data;
 using UnityEngine;
 
 public static class DataTableManager
@@ -7,6 +8,10 @@ public static class DataTableManager
         new Dictionary<string, DataTable>();
 
     public static StringTable StringTable => Get<StringTable>(DataTableIds.String);
+
+    public static ItemTable ItemTable => Get<ItemTable>(DataTableIds.Item);
+
+    public static CharacterTable CharacterTable => Get<CharacterTable>(DataTableIds.Character);
 
     static DataTableManager()
     {
@@ -21,6 +26,14 @@ public static class DataTableManager
             stringTable.Load(id);
             tables.Add(id, stringTable);
         }
+
+        var itemTable = new ItemTable();
+        itemTable.Load(DataTableIds.Item);
+        tables.Add(DataTableIds.Item, itemTable);
+
+        var characterTable = new CharacterTable();
+        characterTable.Load(DataTableIds.Character);
+        tables.Add(DataTableIds.Character, characterTable);
     }
 
     public static T Get<T>(string id) where T : DataTable

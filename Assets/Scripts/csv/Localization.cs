@@ -19,7 +19,7 @@ public class Localization : MonoBehaviour
 
     private void OnValidate()
     {
-        OnChangedId();
+        //OnChangedId();
     }
 
     // 인스펙터에서 변경됐을때 자동으로 실행되는 함수

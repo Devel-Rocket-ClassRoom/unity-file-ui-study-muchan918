@@ -6,7 +6,6 @@ public enum StringIds
     Hello,
     Bye,
     YouDie,
-    Hi,
 }
 
 public class StringTableText : MonoBehaviour
@@ -18,10 +17,9 @@ public class StringTableText : MonoBehaviour
 
     public static readonly string[] StringIds =
     {
-        "Hello",
-        "Bye",
-        "You die",
-        "Hi",
+        "HELLO",
+        "BYE",
+        "YOU DIE",
     };
 
     private void Start()

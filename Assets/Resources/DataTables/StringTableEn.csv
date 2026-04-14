@@ -1,5 +1,22 @@
 ﻿Id,String
-Hello,Hello
-Bye,Bye
-You die,You die
-Hi,Hi
+HELLO,Hello~
+BYE,Bye~
+YOU DIE,You Die...
+Item1Name,Sword
+Item2Name,Shield
+Item3Name,Bow
+Item4Name,Potion
+Item1Desc,This is a sword.
+Item2Desc,This is a shield.
+Item3Desc,This is a bow.
+Item4Desc,This is a potion.
+Character1Name,김유찬(영어)
+Character2Name,나상욱(영어)
+Character3Name,유민준(영어)
+Character4Name,이하늘(영어)
+Character1Desc,설명1(영어)
+Character2Desc,설명2(영어)
+Character3Desc,설명3(영어)
+Character4Desc,설명4(영어)
+Attack,Attack
+Defence,Defence
