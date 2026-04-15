@@ -14,8 +14,10 @@ Character1Name,김유찬
 Character2Name,나상욱
 Character3Name,유민준
 Character4Name,이하늘
+Character5Name,윤지수
 Character1Desc,용암 장어 잡아봄
 Character2Desc,김경일로 변신 가능
 Character3Desc,룰루 장인
 Character4Desc,지각 이력 30회
+Character5Desc,일곱개의 대죄 100시간
 StatFormat,"공격력: {0} / 방어력: {1}"

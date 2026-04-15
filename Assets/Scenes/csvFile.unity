@@ -1839,7 +1839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1807b4e20c1a0f24abf541d020220022, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterButton
-  characterId: Character4
+  characterId: Character5
   icon: {fileID: 1448877933}
   textName: {fileID: 433484395}
 --- !u!114 &398494196
