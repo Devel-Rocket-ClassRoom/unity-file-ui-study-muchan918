@@ -311,15 +311,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1454682430369989657, guid: a7fdea580970a9940a5892c9b9d562c3, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1454682430369989657, guid: a7fdea580970a9940a5892c9b9d562c3, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1454682430369989657, guid: a7fdea580970a9940a5892c9b9d562c3, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1454682430369989657, guid: a7fdea580970a9940a5892c9b9d562c3, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -778,6 +778,7 @@ GameObject:
   - component: {fileID: 992829702}
   - component: {fileID: 992829701}
   - component: {fileID: 992829700}
+  - component: {fileID: 992829704}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -869,6 +870,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &992829704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992829699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 016c8cca18a382e419f3986224b63ad8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WindowManager
+  windows:
+  - {fileID: 1559948460}
+  currentWindowId: 0
+  defaultWindowId: 0
 --- !u!1001 &996622960
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1089,7 +1106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StartWindow
   firstSelected: {fileID: 0}
   continueButton: {fileID: 0}
-  startButton: {fileID: 0}
+  newGameButton: {fileID: 0}
   optionButton: {fileID: 0}
   canContinue: 0
 --- !u!114 &1011741751
@@ -1733,9 +1750,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa6032a4250fa9746b0a996b2da2486d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StartWindow
-  firstSelected: {fileID: 594566786}
+  firstSelected: {fileID: 0}
   continueButton: {fileID: 594566788}
-  startButton: {fileID: 1083167404}
+  newGameButton: {fileID: 1083167404}
   optionButton: {fileID: 996622964}
   canContinue: 1
 --- !u!1001 &1660087433
