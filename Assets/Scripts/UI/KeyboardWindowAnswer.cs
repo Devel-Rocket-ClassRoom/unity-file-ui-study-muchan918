@@ -8,6 +8,10 @@ public class KeyboardWindowAnswer : GenericWindow
     private readonly StringBuilder sb = new StringBuilder();
 
     public TextMeshProUGUI inputField;
+    public Button cancelButton;
+    public Button deleteButton;
+    public Button acceptButton;
+
     public GameObject rootKeyboard;
     public int maxCharacters = 7;
 
@@ -23,6 +27,10 @@ public class KeyboardWindowAnswer : GenericWindow
             var text = key.GetComponentInChildren<TextMeshProUGUI>().text;
             key.onClick.AddListener(() => OnKey(text));
         }
+
+        cancelButton.onClick.AddListener(OnCancel);
+        deleteButton.onClick.AddListener(OnDelete);
+        acceptButton.onClick.AddListener(OnAccept);
     }
 
     private void Update()
@@ -38,7 +46,6 @@ public class KeyboardWindowAnswer : GenericWindow
 
     public override void Open()
     {
-        Debug.Log(1);
         sb.Clear();
         timer = 0f;
         blink = false;
