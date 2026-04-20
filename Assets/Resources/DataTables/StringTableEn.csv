@@ -21,3 +21,11 @@ Character3Desc,설명3(영어)
 Character4Desc,설명4(영어)
 Character5Desc,설명5(영어)
 StatFormat,"Attack: {0} / Defence: {1}"
+NAME,이름
+DESC,설명
+TYPE,타입
+VALUE,밸류
+COST,코스트
+WEAPON,무기
+EQUIP,장비
+CONSUMABLE,소모품

@@ -21,3 +21,11 @@ Character3Desc,설명3(일본어)
 Character4Desc,설명4(일본어)
 Character5Desc,설명5(일본어)
 StatFormat,"공격력(일본어): {0} / 방어력(일본어): {1}"
+NAME,이름
+DESC,설명
+TYPE,타입
+VALUE,밸류
+COST,코스트
+WEAPON,무기
+EQUIP,장비
+CONSUMABLE,소모품

@@ -21,3 +21,11 @@ Character3Desc,룰루 장인
 Character4Desc,지각 이력 30회
 Character5Desc,일곱개의 대죄 100시간
 StatFormat,"공격력: {0} / 방어력: {1}"
+NAME,이름
+DESC,설명
+TYPE,타입
+VALUE,밸류
+COST,코스트
+WEAPON,무기
+EQUIP,장비
+CONSUMABLE,소모품
