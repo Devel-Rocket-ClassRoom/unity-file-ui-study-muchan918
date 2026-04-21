@@ -192,6 +192,6 @@ public class UiCharacterSlotList : MonoBehaviour
             }
         }
 
-        UpdateSlots();
+        onSelectSlot.Invoke(uiSlotList[selectedSlotIndex].saveCharacterData);
     }
 }

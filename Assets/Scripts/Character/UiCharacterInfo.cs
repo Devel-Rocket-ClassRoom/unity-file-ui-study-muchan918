@@ -36,15 +36,32 @@ public class UiCharacterInfo : MonoBehaviour
         switch (selectedItem.ItemData.Type)
         {
             case ItemTypes.Weapon:
-                selectedCharacter.WeaponItem = selectedItem.ItemData;
-                selectedCharacter.CharacterData.Attack += selectedItem.ItemData.Value;
+                if (selectedCharacter.WeaponItem != selectedItem.ItemData)
+                {
+                    if (selectedCharacter.WeaponItem != null)
+                    {
+                        selectedCharacter.CharacterData.Attack -= selectedCharacter.WeaponItem.Value;
+                    }
+                    selectedCharacter.WeaponItem = selectedItem.ItemData;
+                    selectedCharacter.CharacterData.Attack += selectedItem.ItemData.Value;
+                }
                 break;
             case ItemTypes.Equip:
-                selectedCharacter.EquipItem = selectedItem.ItemData;
-                selectedCharacter.CharacterData.Defence += selectedItem.ItemData.Value;
+                if (selectedCharacter.EquipItem != selectedItem.ItemData)
+                {
+                    if (selectedCharacter.EquipItem != null)
+                    {
+                        selectedCharacter.CharacterData.Defence -= selectedCharacter.EquipItem.Value;
+                    }
+                    selectedCharacter.EquipItem = selectedItem.ItemData;
+                    selectedCharacter.CharacterData.Defence += selectedItem.ItemData.Value;
+                }
                 break;
             case ItemTypes.Consumable:
-                selectedCharacter.ConsumableItem = selectedItem.ItemData;
+                if (selectedCharacter.ConsumableItem != selectedItem.ItemData)
+                {
+                    selectedCharacter.ConsumableItem = selectedItem.ItemData;
+                }
                 break;
         }
 
@@ -83,6 +100,5 @@ public class UiCharacterInfo : MonoBehaviour
             characterData.Attack,
             characterData.Defence
         );
-
     }
 }
