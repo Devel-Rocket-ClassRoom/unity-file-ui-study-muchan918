@@ -4,10 +4,14 @@ using UnityEngine.UI;
 
 public class UiInventorySlot : MonoBehaviour
 {
+    public int slotIndex = -1;
+
     public Image imageIcon;
     public TextMeshProUGUI textName;
 
     public SaveItemData saveItemData { get; private set; }
+
+    public Button button;
 
     public void SetEmpty()
     {

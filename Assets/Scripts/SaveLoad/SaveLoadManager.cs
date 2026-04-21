@@ -1,5 +1,5 @@
 using UnityEngine;
-using SaveDataVC = SaveDataV4; // 이걸로 버전을 한번에 관리
+using SaveDataVC = SaveDataV5; // 이걸로 버전을 한번에 관리
 using Newtonsoft.Json;
 using System.IO;
 
@@ -13,7 +13,7 @@ public static class SaveLoadManager
 
     public static SaveMode Mode { get; set; } = SaveMode.Text;
 
-    private static int SaveDataVersion { get; } = 4;
+    private static int SaveDataVersion { get; } = 5;
 
     private static readonly string SaveDirectory = $"{Application.persistentDataPath}/Save";
 
@@ -26,6 +26,14 @@ public static class SaveLoadManager
     };
 
     public static SaveDataVC Data { get; set; } = new SaveDataVC();
+
+    static SaveLoadManager()
+    {
+        if (!Load())
+        {
+            Save();
+        }
+    }
 
     public static string GetSaveFilePath(int slot)
     {
@@ -114,7 +122,7 @@ public static class SaveLoadManager
 
         if (!File.Exists(path))
         {
-            return false;
+            return Save();
         }
 
         try

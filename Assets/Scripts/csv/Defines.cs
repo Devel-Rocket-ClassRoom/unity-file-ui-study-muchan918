@@ -12,9 +12,30 @@ public enum ItemTypes
     Consumable,
 }
 
+public enum JobTypes
+{
+    Warrior,
+    Mage,
+    Healer,
+    Rogue,
+    Archer,
+}
+
 public static class Variables
 {
-    public static Languages Language = Languages.Korean;
+    public static event System.Action OnLanguageChanged;  // 추가
+
+    private static Languages language = Languages.Korean;  // 추가
+    public static Languages Language  // 추가
+    {
+        get => language;
+        set
+        {
+            if (language == value) return;
+            language = value;
+            OnLanguageChanged?.Invoke();
+        }
+    }
 }
 
 public static class DataTableIds

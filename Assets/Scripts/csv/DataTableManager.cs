@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Data;
 using UnityEngine;
 
 public static class DataTableManager
@@ -12,6 +11,13 @@ public static class DataTableManager
     public static ItemTable ItemTable => Get<ItemTable>(DataTableIds.Item);
 
     public static CharacterTable CharacterTable => Get<CharacterTable>(DataTableIds.Character);
+
+#if UNITY_EDITOR
+    public static StringTable GetStringTable(Languages lang)  // 추가
+    {
+        return Get<StringTable>(DataTableIds.StringTableIds[(int)lang]);
+    }
+#endif
 
     static DataTableManager()
     {

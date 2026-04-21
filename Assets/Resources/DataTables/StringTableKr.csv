@@ -29,3 +29,24 @@ COST,코스트
 WEAPON,무기
 EQUIP,장비
 CONSUMABLE,소모품
+JOB,직업
+WARRIOR,전사
+MAGE,마법사
+HEALER,힐러
+ROGUE,도적
+ARCHER,궁수
+Load,불러오기
+Save,저장하기
+AddItem,아이템 추가
+RemoveItem,아이템 삭제
+SortTimeAscending,날짜 (오름차순)
+SortTimeDescending,날짜 (내림차순)
+SortNameAscending,이름 (오름차순)
+SortNameDesceding,이름 (내림차순)
+SortCostAscending,가격 (오름차순)
+SortCostDescending,가격 (내림차순)
+FilterNone,없음
+FilterWeapon,무기
+FilterEquip,장비
+FilterConsumable,소모품
+FilterNonConsumable,비소모품

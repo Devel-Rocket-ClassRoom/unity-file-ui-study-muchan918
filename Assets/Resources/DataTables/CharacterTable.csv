@@ -1,6 +1,6 @@
-Id,Name,Desc,Attack,Defence,Icon
-Character1,Character1Name,Character1Desc,300,300,Icon_Character01
-Character2,Character2Name,Character2Desc,1,1,Icon_Character02
-Character3,Character3Name,Character3Desc,1,1,Icon_Character03
-Character4,Character4Name,Character4Desc,1,1,Icon_Character04
-Character5,Character5Name,Character5Desc,1,1,Icon_Character05
+Id,Name,Desc,Attack,Defence,Icon,Job
+Character1,Character1Name,Character1Desc,300,300,Icon_Character01,Warrior
+Character2,Character2Name,Character2Desc,1,1,Icon_Character02,Mage
+Character3,Character3Name,Character3Desc,1,1,Icon_Character03,Healer
+Character4,Character4Name,Character4Desc,1,1,Icon_Character04,Rogue
+Character5,Character5Name,Character5Desc,1,1,Icon_Character05,Archer

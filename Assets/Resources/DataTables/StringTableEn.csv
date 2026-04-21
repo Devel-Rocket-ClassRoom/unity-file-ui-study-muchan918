@@ -21,11 +21,32 @@ Character3Desc,설명3(영어)
 Character4Desc,설명4(영어)
 Character5Desc,설명5(영어)
 StatFormat,"Attack: {0} / Defence: {1}"
-NAME,이름
-DESC,설명
-TYPE,타입
-VALUE,밸류
-COST,코스트
-WEAPON,무기
-EQUIP,장비
-CONSUMABLE,소모품
+NAME,Name
+DESC,Describe
+TYPE,Type
+VALUE,Value
+COST,Cost
+WEAPON,Weapon
+EQUIP,Equipment
+CONSUMABLE,Consumable
+JOB,Job
+WARRIOR,전사e
+MAGE,마법사e
+HEALER,힐러e
+ROGUE,도적e
+ARCHER,궁수e
+Load,불러오기e
+Save,저장하기e
+AddItem,아이템 추가e
+RemoveItem,아이템 삭제e
+SortTimeAscending,날짜 (오름차순)e
+SortTimeDescending,날짜 (내림차순)e
+SortNameAscending,이름 (오름차순)e
+SortNameDesceding,이름 (내림차순)e
+SortCostAscending,가격 (오름차순)e
+SortCostDescending,가격 (내림차순)e
+FilterNone,없음e
+FilterWeapon,무기e
+FilterEquip,장비e
+FilterConsumable,소모품e
+FilterNonConsumable,비소모품e

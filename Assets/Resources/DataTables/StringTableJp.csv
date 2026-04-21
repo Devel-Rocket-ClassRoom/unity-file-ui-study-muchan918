@@ -21,11 +21,32 @@ Character3Desc,설명3(일본어)
 Character4Desc,설명4(일본어)
 Character5Desc,설명5(일본어)
 StatFormat,"공격력(일본어): {0} / 방어력(일본어): {1}"
-NAME,이름
-DESC,설명
-TYPE,타입
-VALUE,밸류
-COST,코스트
-WEAPON,무기
-EQUIP,장비
-CONSUMABLE,소모품
+NAME,名前
+DESC,説明
+TYPE,タイプ
+VALUE,値
+COST,コスト
+WEAPON,武器
+EQUIP,装備
+CONSUMABLE,消耗品
+JOB,クラス
+WARRIOR,전사j
+MAGE,마법사j
+HEALER,힐러j
+ROGUE,도적j
+ARCHER,궁수j
+Load,불러오기j
+Save,저장하기j
+AddItem,아이템 추가j
+RemoveItem,아이템 삭제j
+SortTimeAscending,날짜 (오름차순)j
+SortTimeDescending,날짜 (내림차순)j
+SortNameAscending,이름 (오름차순)j
+SortNameDesceding,이름 (내림차순)j
+SortCostAscending,가격 (오름차순)j
+SortCostDescending,가격 (내림차순)j
+FilterNone,없음j
+FilterWeapon,무기j
+FilterEquip,장비j
+FilterConsumable,소모품j
+FilterNonConsumable,비소모품j
