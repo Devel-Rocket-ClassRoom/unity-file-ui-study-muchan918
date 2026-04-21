@@ -112,6 +112,32 @@ public class SaveDataV5 : SaveDataV4
 
     public override SaveData VersionUp()
     {
+        SaveDataV6 data = new SaveDataV6();
+        data.Name = Name;
+        data.Gold = Gold;
+        data.ItemList = ItemList.ToList();
+
+        return data;
+    }
+}
+
+[System.Serializable]
+public class SaveDataV6 : SaveDataV5
+{
+    public int ItemSortingIndex = 0;
+    public int ItemFilteringIndex = 0;
+    public int CharacterSortingIndex = 0;
+    public int CharacterFilteringIndex = 0;
+
+    public List<SaveCharacterData> CharacterList = new List<SaveCharacterData>();
+
+    public SaveDataV6()
+    {
+        Version = 6;
+    }
+
+    public override SaveData VersionUp()
+    {
         throw new System.NotImplementedException();
     }
 }

@@ -39,14 +39,25 @@ Load,불러오기
 Save,저장하기
 AddItem,아이템 추가
 RemoveItem,아이템 삭제
+AddCharacter,캐릭터 추가
+RemoveCharacter,캐릭터 삭제
 SortTimeAscending,날짜 (오름차순)
 SortTimeDescending,날짜 (내림차순)
 SortNameAscending,이름 (오름차순)
 SortNameDesceding,이름 (내림차순)
 SortCostAscending,가격 (오름차순)
 SortCostDescending,가격 (내림차순)
+SortAttackAscending,공격력 (오름차순)
+SortAttackDescending,공격력 (내림차순)
+SortDefenceAscending,방어력 (오름차순)
+SortDefenceDescending,방어력 (내림차순)
 FilterNone,없음
 FilterWeapon,무기
 FilterEquip,장비
 FilterConsumable,소모품
 FilterNonConsumable,비소모품
+FilterWarrior,전사
+FilterMage,마법사
+FilterHealer,힐러
+FilterRogue,도적
+FilterArcher,궁수

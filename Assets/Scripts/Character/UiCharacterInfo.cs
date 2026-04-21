@@ -16,6 +16,41 @@ public class UiCharacterInfo : MonoBehaviour
     public TextMeshProUGUI textDesc;
     public TextMeshProUGUI textStat;
 
+    private SaveCharacterData selectedCharacter;
+    private SaveItemData selectedItem;
+
+    public void SetSelectedCharacter(SaveCharacterData character)
+    {
+        selectedCharacter = character;
+    }
+
+    public void SetSelectedItem(SaveItemData item)
+    {
+        selectedItem = item;
+    }
+
+    public void OnEquip()
+    {
+        if (selectedCharacter == null || selectedItem == null) return;
+
+        switch (selectedItem.ItemData.Type)
+        {
+            case ItemTypes.Weapon:
+                selectedCharacter.WeaponItem = selectedItem.ItemData;
+                selectedCharacter.CharacterData.Attack += selectedItem.ItemData.Value;
+                break;
+            case ItemTypes.Equip:
+                selectedCharacter.EquipItem = selectedItem.ItemData;
+                selectedCharacter.CharacterData.Defence += selectedItem.ItemData.Value;
+                break;
+            case ItemTypes.Consumable:
+                selectedCharacter.ConsumableItem = selectedItem.ItemData;
+                break;
+        }
+
+        SetSaveCharacterData(selectedCharacter);
+    }
+
     public void SetEmpty()
     {
         characterIcon.sprite = null;
@@ -33,9 +68,9 @@ public class UiCharacterInfo : MonoBehaviour
         CharacterData characterData = saveCharacterData.CharacterData;
 
         characterIcon.sprite = characterData.SpriteIcon;
-        weaponIcon.sprite = saveCharacterData.WeaponItem.SpriteIcon;
-        equipIcon.sprite = saveCharacterData.EquipItem.SpriteIcon;
-        consumableIcon.sprite = saveCharacterData.ConsumableItem.SpriteIcon;
+        weaponIcon.sprite = saveCharacterData.WeaponItem?.SpriteIcon;
+        equipIcon.sprite = saveCharacterData.EquipItem?.SpriteIcon;
+        consumableIcon.sprite = saveCharacterData.ConsumableItem?.SpriteIcon;
 
         textName.text = string.Format(FormatCommon, DataTableManager.StringTable.Get("NAME"), characterData.StringName);
 
@@ -49,18 +84,5 @@ public class UiCharacterInfo : MonoBehaviour
             characterData.Defence
         );
 
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            SetEmpty();
-        }
-
-        if (Input.GetKeyDown(KeyCode.Alpha5))
-        {
-            SetSaveCharacterData(SaveCharacterData.GetRandomCharacter());
-        }
     }
 }

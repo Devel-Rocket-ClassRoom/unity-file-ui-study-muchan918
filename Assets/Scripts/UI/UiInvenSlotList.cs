@@ -84,11 +84,12 @@ public class UiInvenSlotList : MonoBehaviour
 
     public UnityEvent onUpdateSlots;
     public UnityEvent<SaveItemData> onSelectSlot;
-    public UiItemInfo uiItemInfo;
+    public UnityEvent<ItemData> onRemoveItem;
+    //public UiItemInfo uiItemInfo;
 
     private void OnSelectSlot(SaveItemData saveItemData)
     {
-        uiItemInfo.SetSaveItemData(saveItemData);
+        //uiItemInfo.SetSaveItemData(saveItemData);
         Debug.Log(saveItemData);
     }
 
@@ -116,6 +117,12 @@ public class UiInvenSlotList : MonoBehaviour
     public List<SaveItemData> GetSaveItemDataList()
     {
         return saveItemDataList;
+    }
+
+    public SaveItemData GetSelectedItem()
+    {
+        if (selectedSlotIndex == -1) return null;
+        return uiSlotList[selectedSlotIndex].saveItemData;
     }
 
     private void UpdateSlots()
@@ -176,7 +183,10 @@ public class UiInvenSlotList : MonoBehaviour
             return;
         }
 
+        ItemData removedItemData = uiSlotList[selectedSlotIndex].saveItemData.ItemData;
         saveItemDataList.Remove(uiSlotList[selectedSlotIndex].saveItemData);
+
+        onRemoveItem.Invoke(removedItemData);
         UpdateSlots();
     }
 }

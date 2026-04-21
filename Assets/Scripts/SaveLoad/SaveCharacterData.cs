@@ -25,9 +25,9 @@ public class SaveCharacterData
     {
         SaveCharacterData newCharacter = new SaveCharacterData();
         newCharacter.CharacterData = DataTableManager.CharacterTable.GetRandom();
-        newCharacter.WeaponItem = DataTableManager.ItemTable.GetRandom();
-        newCharacter.EquipItem = DataTableManager.ItemTable.GetRandom();
-        newCharacter.ConsumableItem = DataTableManager.ItemTable.GetRandom();
+        // newCharacter.WeaponItem = DataTableManager.ItemTable.GetRandom();
+        // newCharacter.EquipItem = DataTableManager.ItemTable.GetRandom();
+        // newCharacter.ConsumableItem = DataTableManager.ItemTable.GetRandom();
 
         return newCharacter;
     }
