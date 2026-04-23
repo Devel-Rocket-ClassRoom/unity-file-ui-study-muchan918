@@ -85,22 +85,34 @@ public class UiInvenSlotList : MonoBehaviour
     public UnityEvent onUpdateSlots;
     public UnityEvent<SaveItemData> onSelectSlot;
     public UnityEvent<ItemData> onRemoveItem;
-    //public UiItemInfo uiItemInfo;
+    public UiItemInfo uiItemInfo;
 
     private void OnSelectSlot(SaveItemData saveItemData)
     {
-        //uiItemInfo.SetSaveItemData(saveItemData);
+        uiItemInfo.gameObject.SetActive(true);
+        uiItemInfo.SetSaveItemData(saveItemData);
         Debug.Log(saveItemData);
+    }
+
+    public void OnClickEquip()
+    {
+        uiItemInfo.gameObject.SetActive(false);
+    }
+
+    public void OnClickX()
+    {
+        uiItemInfo.gameObject.SetActive(false);
     }
 
     private void Start()
     {
         onSelectSlot.AddListener(OnSelectSlot);
+        onUpdateSlots.AddListener(() => uiItemInfo.gameObject.SetActive(false));
     }
 
     void OnEnable()
     {
-
+        uiItemInfo.gameObject.SetActive(false);
     }
 
     private void OnDisable()

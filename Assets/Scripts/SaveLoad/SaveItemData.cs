@@ -17,6 +17,7 @@ public class SaveItemData
     {
         SaveItemData newItem = new SaveItemData();
         newItem.ItemData = DataTableManager.ItemTable.GetRandom();
+        newItem.ItemData.Value = UnityEngine.Random.Range(0, 50);
         return newItem;
     }
 

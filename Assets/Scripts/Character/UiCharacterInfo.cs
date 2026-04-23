@@ -68,6 +68,35 @@ public class UiCharacterInfo : MonoBehaviour
         SetSaveCharacterData(selectedCharacter);
     }
 
+    public void OnUnequipWeapon()
+    {
+        if (selectedCharacter == null || selectedCharacter.WeaponItem == null) return;
+
+        selectedCharacter.CharacterData.Attack -= selectedCharacter.WeaponItem.Value;
+        selectedCharacter.WeaponItem = null;
+
+        SetSaveCharacterData(selectedCharacter);
+    }
+
+    public void OnUnequipEquip()
+    {
+        if (selectedCharacter == null || selectedCharacter.EquipItem == null) return;
+
+        selectedCharacter.CharacterData.Defence -= selectedCharacter.EquipItem.Value;
+        selectedCharacter.EquipItem = null;
+
+        SetSaveCharacterData(selectedCharacter);
+    }
+
+    public void OnUnequipConsumable()
+    {
+        if (selectedCharacter == null || selectedCharacter.ConsumableItem == null) return;
+
+        selectedCharacter.ConsumableItem = null;
+
+        SetSaveCharacterData(selectedCharacter);
+    }
+
     public void SetEmpty()
     {
         characterIcon.sprite = null;
